@@ -3,6 +3,8 @@ class CreateReviews < ActiveRecord::Migration[6.0]
     create_table :reviews do |t|
       t.integer :rating
       t.string :content
+      t.belongs_to :user
+      t.belongs_to :driver
       t.timestamps
     end
   end
